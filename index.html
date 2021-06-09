@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<!--
+    Name: Jerry Goe
+    Date: June 9th 2021
+    Description: This is my portfolio website where I create a simple webpage using HTML, CSS Bootstrap 5 and JavaScript. This is a means to get my projects seen 
+                 and also get some practice in with Bootstrap. This page is to be responsive following modern techniques to achieve it. This will contain notes which
+                 will help me understand what I am writing as well as what I deem to be important when it comes to responsive web design. 
+
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,18 +14,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="./style.css"/>
     <title>Jerry Goe</title>
 </head>
 <body>
-    <div>
-        <h1>Jerry Goe</h1>
-        <p>Software Developer Graduate</p>
-    </div>
-    <nav>
-        <a href="projects.html">PROJECTS</a>
-        <a href="contact.html">CONTACT</a>
+    <!-- This is for the javascript side of Bootstrap, allows for modal, accordion, etc. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- This is for the navigation bar at the top of the site, the user can make the webpage smaller and the page will respond to that
+         Once the page reaches a certain breakpoint window size, then it will collapse into the burger menu where
+         the user can click on it and see the nav menu 
+    -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">Jerry Goe</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <!-- This is what gives the button its navmenu icon, the burger! -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto"">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Who Am I</a>
+                    </li>
+                    <li class="nav-item">  
+                        <a href="#projects" class="nav-link">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+    <section class="bg-dark text-light p-5 text-center text-sm-start">
+        <div class="container">
+            <!-- The whole d-sm-flex means that once my page reaches the sm breakpoint, it will do certain things-->
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div> 
+                    <h1>I am a:</h1>
+                    <h4>Software Developer</h4>
+                </div>
+                <!-- Put two flex items in this div -->
+                <!-- In regards to the d-sm-block, it tells the webpage to hide the image once the page reaches the sm breakpoint -->
+                <img class="img-fluid w-25 rounded-circle d-none d-sm-block" src="./img/face.jpeg" alt="shaggy from scoobydoo">
+            </div>
+        </div>
+    </section>
+    <section class="p-5">
+        <div class="container">
+            <h1>Work Experience</h1>
+            <!-- This will create a row under the banner with 3 columns-->
+            <div class="row">
+                <!-- We're going to turn these into cards
+                     These columns will also show side by side on medium sized screens and up
+                     Anything medium breakpoint and lower will stack on top of each other this 
+                     is because of the "col-md" class
+                -->
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+
+                    </div>
+                </div>
+                <div class="col-md"></div>
+                <div class="col-md"></div>
+            </div>
+        </div>
+    </section>
     <h2>Work Experience</h2>
     <div>
         <h4>Canadian Tire Corportation</h4>
